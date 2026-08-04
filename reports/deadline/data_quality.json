@@ -1,0 +1,23 @@
+{
+  "source_rows": 71896,
+  "rows_after_required_dates_and_order": 69998,
+  "rows_after_date_bounds": 69998,
+  "duplicate_order_rows_removed": 0,
+  "final_rows": 69998,
+  "current_on_time_rate": 0.6370896311323181,
+  "target_clip_workdays": 260,
+  "clipped_rows": 0,
+  "target_summary_workdays": {
+    "count": 69998.0,
+    "mean": 2.228649389982571,
+    "std": 6.571043624826694,
+    "min": 0.0,
+    "50%": 0.0,
+    "75%": 2.0,
+    "80%": 3.0,
+    "85%": 4.0,
+    "90%": 6.0,
+    "95%": 11.0,
+    "max": 213.0
+  }
+}

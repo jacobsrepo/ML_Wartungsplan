@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937">
+    <h2>Maintenance-plan recommendation</h2>
+    <table cellpadding="6" cellspacing="0" style="border-collapse:collapse">
+      <tr><td><strong>Work centre</strong></td><td>{{ request.responsible_work_center }}</td></tr>
+      <tr><td><strong>Technical location</strong></td><td>{{ request.technical_location }}</td></tr>
+      <tr><td><strong>Task</strong></td><td>{{ request.task_description }}</td></tr>
+    </table>
+
+    <h3>Recommended SAP values</h3>
+    <table cellpadding="6" cellspacing="0" style="border-collapse:collapse">
+      <tr><td><strong>Strategy</strong></td><td>{{ recommendation.predicted_strategy }}</td></tr>
+      <tr><td><strong>Confidence</strong></td><td>{{ "%.1f%%"|format(recommendation.prediction_confidence * 100) }}</td></tr>
+      <tr><td><strong>Alternative 1</strong></td><td>{{ recommendation.top_2_strategy }} — {{ "%.1f%%"|format(recommendation.top_2_probability * 100) }}</td></tr>
+      <tr><td><strong>Detected frequency</strong></td><td>{{ recommendation.frequency_hint }}</td></tr>
+      <tr><td><strong>Review status</strong></td><td>{{ recommendation.review_status }}</td></tr>
+    </table>
+
+    <p>
+      This is a recommendation based on historical SAP assignments.
+      A planner must verify the values before SAP entry.
+    </p>
+  </body>
+</html>

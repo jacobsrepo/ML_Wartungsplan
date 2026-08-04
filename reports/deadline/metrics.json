@@ -1,0 +1,53 @@
+{
+  "training_rows": 55998,
+  "test_rows": 14000,
+  "train_start": "2025-01-01",
+  "train_end": "2026-04-13",
+  "test_start": "2026-04-13",
+  "test_end": "2026-12-30",
+  "quantiles": {
+    "q50": {
+      "quantile": 0.5,
+      "pinball_loss": 0.7306428571428571,
+      "coverage": 0.6862142857142857,
+      "mean_absolute_error": 1.4612857142857143,
+      "mean_padding_when_on_time": 0.0,
+      "mean_lateness_when_late": 4.656954245390394,
+      "mean_recommended_extension": 0.0
+    },
+    "q80": {
+      "quantile": 0.8,
+      "pinball_loss": 0.8724522501580041,
+      "coverage": 0.8394285714285714,
+      "mean_absolute_error": 2.803711971217019,
+      "mean_padding_when_on_time": 2.72113152022614,
+      "mean_lateness_when_late": 3.2354225851159577,
+      "mean_recommended_extension": 3.2259648324540664
+    },
+    "q85": {
+      "quantile": 0.85,
+      "pinball_loss": 0.8206126829056398,
+      "coverage": 0.8652142857142857,
+      "mean_absolute_error": 3.511702327618503,
+      "mean_padding_when_on_time": 3.573572683183503,
+      "mean_lateness_when_late": 3.114545137921189,
+      "mean_recommended_extension": 4.133395659724606
+    },
+    "q90": {
+      "quantile": 0.9,
+      "pinball_loss": 0.690173592587057,
+      "coverage": 0.8998571428571429,
+      "mean_absolute_error": 4.374909880612522,
+      "mean_padding_when_on_time": 4.510778913269862,
+      "mean_lateness_when_late": 3.154026803995423,
+      "mean_recommended_extension": 5.2044890835837245
+    }
+  },
+  "business_comparison": {
+    "selected_quantile": 0.85,
+    "current_on_time_rate": 0.6650714285714285,
+    "simulated_recommended_on_time_rate": 0.8652142857142857,
+    "current_mean_extension_workdays": 2.2182142857142857,
+    "recommended_mean_extension_workdays": 4.133395659724606
+  }
+}

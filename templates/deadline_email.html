@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937">
+    <h2>Recommended Eckende</h2>
+    <table cellpadding="6" cellspacing="0" style="border-collapse:collapse">
+      <tr><td><strong>Order</strong></td><td>{{ request.order_number or "Not assigned" }}</td></tr>
+      <tr><td><strong>Work centre</strong></td><td>{{ request.responsible_work_center }}</td></tr>
+      <tr><td><strong>Technical location</strong></td><td>{{ request.technical_location }}</td></tr>
+      <tr><td><strong>Task</strong></td><td>{{ request.task_description }}</td></tr>
+      <tr><td><strong>Plandatum</strong></td><td>{{ request.planned_date }}</td></tr>
+    </table>
+
+    <h3>Deadline recommendation</h3>
+    <table cellpadding="6" cellspacing="0" style="border-collapse:collapse">
+      <tr><td><strong>Recommended Eckende</strong></td><td>{{ recommendation.recommended_eckende }}</td></tr>
+      <tr><td><strong>Extension</strong></td><td>{{ recommendation.recommended_extension_workdays }} working days</td></tr>
+      <tr><td><strong>Selected service level</strong></td><td>{{ "%.0f%%"|format(recommendation.selected_service_level * 100) }}</td></tr>
+      <tr><td><strong>Similar historical orders</strong></td><td>{{ recommendation.similar_history_count }}</td></tr>
+      <tr><td><strong>Review status</strong></td><td>{{ recommendation.review_status }}</td></tr>
+    </table>
+
+    {% if recommendation.manual_review_reasons %}
+    <h3>Manual-review reasons</h3>
+    <ul>
+      {% for reason in recommendation.manual_review_reasons %}
+      <li>{{ reason }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p>
+      The recommendation is the smallest deadline associated with the selected
+      completion service level, subject to configured business guardrails.
+    </p>
+  </body>
+</html>

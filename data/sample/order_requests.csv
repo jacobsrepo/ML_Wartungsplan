@@ -1,0 +1,3 @@
+order_number,responsible_work_center,technical_location,task_description,strategy,planned_date,call_date,current_eckende,cycle_days,task_list_group,factory_calendar,call_confirm,opening_horizon_days,opening_horizon_percent,late_shift_percent,late_tolerance_percent,early_shift_percent,early_tolerance_percent,stretch_factor
+DEMO-001,EH_STPM,8160-330,wöchentlicher TPM Wartungsplan HFM6M3,8160_W,2026-09-10,2026-08-20,2026-09-10,7,06000001,TH,X,14,0,100,0,0,0,1
+DEMO-002,EH_NOHL,8160-380,jährliche Wartung und Funktionsprüfung PFM,8160_J,2026-10-15,2026-09-15,2026-10-15,365,06000002,TH,X,30,0,100,0,0,0,1

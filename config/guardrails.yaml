@@ -1,0 +1,12 @@
+# PILOT VALUES — these require agreement from maintenance planning.
+deadline:
+  minimum_extension_workdays: 0
+  absolute_max_extension_workdays: 60
+  maximum_cycle_fraction: 0.20
+  minimum_similar_history: 20
+  manual_review_if_capped: true
+
+email:
+  sender_display_name: "ML Wartungsplan Assistant"
+  strategy_subject_prefix: "[RECOMMENDATION] Maintenance plan"
+  deadline_subject_prefix: "[RECOMMENDATION] Eckende"

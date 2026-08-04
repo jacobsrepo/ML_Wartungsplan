@@ -1,0 +1,31 @@
+project:
+  timezone: Europe/Berlin
+  german_state: TH
+  random_state: 42
+
+paths:
+  raw_excel: data/raw/SAP_notintime_.xlsx
+  strategy_dataset: data/processed/maintenance_strategy_ml_dataset.csv
+  deadline_dataset: data/processed/maintenance_deadline_ml_dataset.csv
+  strategy_model: models/maintenance_strategy_pipeline.joblib
+  deadline_model: models/deadline_quantile_bundle.joblib
+  reports_dir: reports
+
+strategy_model:
+  test_folds: 5
+  tfidf_max_features: 20000
+  min_document_frequency: 2
+  confidence_high: 0.95
+  confidence_planner_review: 0.80
+
+deadline_model:
+  quantiles: [0.50, 0.80, 0.85, 0.90]
+  selected_quantile: 0.85
+  test_fraction: 0.20
+  text_svd_components: 40
+  max_text_features: 3000
+  min_document_frequency: 3
+  max_training_rows: null
+  earliest_valid_date: "2000-01-01"
+  latest_completion_offset_days: 730
+  target_clip_workdays: 260

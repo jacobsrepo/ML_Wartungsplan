@@ -1,0 +1,8 @@
+.venv
+.git
+data/raw
+data/processed
+reports
+notebooks
+tests
+*.zip

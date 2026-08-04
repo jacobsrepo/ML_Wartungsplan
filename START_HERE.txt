@@ -1,0 +1,13 @@
+ML_Wartungsplan — start here
+
+1. Open PowerShell in this folder.
+2. Run: uv sync --extra dev
+3. Run: uv run python scripts\00_check_environment.py
+4. Run: uv run python scripts\01_build_datasets.py
+5. Run: uv run python scripts\02_train_strategy.py
+6. Run: uv run python scripts\03_train_deadline.py
+7. Start API: uv run python scripts\07_run_api.py
+8. Open: http://127.0.0.1:8000/docs
+
+Read README.md for the full explanation.
+Read docs\BUSINESS_DECISIONS_REQUIRED.md with the maintenance planners before a pilot.
